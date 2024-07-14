@@ -1,0 +1,6 @@
+#!/bin/bash
+#script for bug fix
+nginx
+curl 0:80
+pkill nginx
+service nginx status
