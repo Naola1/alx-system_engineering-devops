@@ -1,6 +1,5 @@
 #!/bin/bash
 #script for bug fix
-nginx
+
+service nginx status | grep -q "not running"
 curl 0:80
-pkill nginx
-service nginx status
