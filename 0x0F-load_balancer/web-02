@@ -1,0 +1,12 @@
+#!/bin/bash
+# Script for connecting to remote web-02
+
+# Start the SSH agent
+eval "$(ssh-agent -s)"
+
+# Add your private key to the SSH agent
+ssh-add ~/.ssh/id_rsa
+
+# Connect to the remote server
+ssh ubuntu@54.90.59.95
+
