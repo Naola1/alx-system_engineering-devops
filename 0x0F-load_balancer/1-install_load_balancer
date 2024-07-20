@@ -5,19 +5,19 @@
 # Make sure that HAProxy can be managed via an init script
 # Install and configure HAproxy on my lb-01 server.
 sudo apt-get -y update
-apt-get -y install haproxy
+sudo apt-get -y install haproxy
 
 # edit config file
 server_config=\
 "
-frontend naola1-frontend
+frontend naol-frontend
         bind *:80
         mode http
-        default_backend naola1-backend
-backend naola1-backend
+        default_backend naol-backend
+backend naol-backend
         balance roundrobin
-        server 87694-web-01 100.25.211.11:80 check
-        server 87694-web-02 52.4.72.230:80 check
+        server 87694-web-01 52.91.151.54:80 check
+        server 87694-web-02 52.90.59.95:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
