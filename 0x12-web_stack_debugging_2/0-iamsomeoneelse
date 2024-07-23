@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 #a bash script that accepts one argument
 #the script run the 'whami' cmmand under the user passed as argument
 
